@@ -1,0 +1,38 @@
+
+import { motion } from 'motion/react';
+import * as Icons from 'lucide-react';
+import { AMENITIES } from '../data/constants';
+
+export default function Amenities() {
+  return (
+    <section id="amenities" className="py-24 bg-dark">
+      <div className="max-w-7xl mx-auto px-6 text-center">
+        <span className="text-secondary font-bold tracking-[0.2em] uppercase text-sm mb-4 block">Lifestyle & Comfort</span>
+        <h2 className="text-4xl md:text-5xl font-bold mb-16">Premium Amenities</h2>
+
+        <div className="grid grid-cols-2 lg:grid-cols-5 gap-6">
+          {AMENITIES.map((item, i) => {
+            const Icon = (Icons as any)[item.icon];
+            return (
+              <motion.div
+                key={item.id}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ delay: i * 0.05 }}
+                viewport={{ once: true }}
+                whileHover={{ y: -5, backgroundColor: 'rgba(201,148,60,0.1)' }}
+                className="glass-card p-6 flex flex-col items-center group transition-all duration-300"
+              >
+                <div className="w-12 h-12 rounded-full bg-secondary/15 flex items-center justify-center mb-4 border border-secondary/30 group-hover:bg-secondary group-hover:text-dark transition-all duration-500">
+                  <Icon size={20} className="text-secondary group-hover:text-dark transition-colors" />
+                </div>
+                <h4 className="font-semibold text-sm tracking-wide mb-1 text-white/90 uppercase">{item.title}</h4>
+                <span className="text-[10px] text-white/30 uppercase tracking-[0.2em] font-bold">{item.description.split(' ')[0]}</span>
+              </motion.div>
+            );
+          })}
+        </div>
+      </div>
+    </section>
+  );
+}
