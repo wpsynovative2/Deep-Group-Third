@@ -18,7 +18,7 @@ export default function Navbar() {
   }, []);
 
   return (
-    <nav className={`fixed top-0 left-0 w-full z-50 transition-all duration-500 ${isScrolled ? 'bg-black/60 backdrop-blur-md shadow-xl py-4' : 'bg-transparent py-6'}`}>
+    <nav className={`fixed top-0 left-0 w-full z-50 transition-all duration-500 ${isScrolled ? 'bg-dark/80 backdrop-blur-md shadow-xl py-4 border-b border-white/5' : 'bg-transparent py-6'}`}>
       <div className="max-w-7xl mx-auto px-6 flex justify-between items-center">
         <a href="#home" className="flex items-center gap-2">
           {/* Logo Placeholder */}
@@ -59,7 +59,7 @@ export default function Navbar() {
             initial={{ opacity: 0, height: 0 }}
             animate={{ opacity: 1, height: 'auto' }}
             exit={{ opacity: 0, height: 0 }}
-            className="lg:hidden bg-white overflow-hidden shadow-2xl"
+            className="lg:hidden bg-dark border-t border-white/10 overflow-hidden shadow-2xl"
           >
             <div className="flex flex-col gap-6 p-8">
               {NAVIGATION_LINKS.map((link) => (
@@ -67,7 +67,7 @@ export default function Navbar() {
                   key={link.name}
                   href={link.href}
                   onClick={() => setIsMenuOpen(false)}
-                  className="text-lg font-serif font-medium text-luxury-charcoal hover:text-secondary"
+                  className="text-lg font-serif font-medium text-white hover:text-secondary"
                 >
                   {link.name}
                 </a>

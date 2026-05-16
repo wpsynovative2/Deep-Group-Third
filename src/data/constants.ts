@@ -3,7 +3,7 @@ export const COLORS = {
   primary: '#650727', // Maroon
   secondary: '#c9943c', // Gold
   cream: '#f5f2ed',
-  charcoal: '#1a1a1a',
+  charcoal: '#380415',
 };
 
 export const NAVIGATION_LINKS = [

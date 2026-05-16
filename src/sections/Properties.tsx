@@ -37,7 +37,7 @@ export default function Properties() {
                   className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 opacity-80 group-hover:opacity-100"
                   referrerPolicy="no-referrer"
                 />
-                <div className="absolute inset-0 bg-black/40 group-hover:bg-black/20 transition-colors duration-500" />
+                <div className="absolute inset-0 bg-dark/40 group-hover:bg-dark/20 transition-colors duration-500" />
                 
                 {property.featured && (
                   <div className="absolute top-6 left-6">
