@@ -48,7 +48,7 @@ export default function Hero() {
               <div className="w-12 h-0.5 bg-secondary"></div>
               <span className="text-secondary uppercase tracking-[0.3em] font-semibold text-xs">Redefining Luxury</span>
             </div>
-            <h1 className="text-5xl md:text-7xl text-white font-light leading-tight mb-8">
+            <h1 className="text-xl md:text-6xl text-white font-light leading-tight mb-8" style={{ fontFamily: "var(--font-extraboldItalic)", fontWeight: 900, textTransform: "uppercase" }}>
               {HERO_SLIDES[currentSlide].title.split(' Crafted ')[0]} <br />
               <span className="font-bold text-secondary">Crafted For</span> <br />
               Modern Families
@@ -85,37 +85,37 @@ export default function Hero() {
             className="hidden lg:block lg:col-span-2"
           >
             <div className="glass-card p-6 flex flex-col gap-6">
-               <div className="relative w-full h-56 rounded-lg overflow-hidden">
-                  <div className="absolute top-3 left-3 bg-secondary text-dark px-2 py-0.5 text-[10px] font-bold uppercase rounded-sm z-10">Featured</div>
-                  <img 
-                    src={HERO_SLIDES[0].image} 
-                    className="w-full h-full object-cover opacity-80" 
-                    alt="Featured Property"
-                  />
-               </div>
-               <div className="space-y-4">
-                  <div className="flex justify-between items-center">
-                    <h3 className="text-xl font-semibold text-white">The Azure Heights</h3>
-                    <span className="text-secondary font-bold text-lg">₹12.5 Cr</span>
+              <div className="relative w-full h-56 rounded-lg overflow-hidden">
+                <div className="absolute top-3 left-3 bg-secondary text-dark px-2 py-0.5 text-[10px] font-bold uppercase rounded-sm z-10">Featured</div>
+                <img
+                  src={HERO_SLIDES[0].image}
+                  className="w-full h-full object-cover opacity-80"
+                  alt="Featured Property"
+                />
+              </div>
+              <div className="space-y-4">
+                <div className="flex justify-between items-center">
+                  <h3 className="text-xl font-semibold text-white">The Azure Heights</h3>
+                  <span className="text-secondary font-bold text-lg">₹12.5 Cr</span>
+                </div>
+                <div className="grid grid-cols-3 gap-2 border-y border-white/10 py-4">
+                  <div className="text-center">
+                    <span className="block text-white text-sm font-semibold">4 BHK</span>
+                    <span className="text-[10px] text-white/30 uppercase tracking-widest">Type</span>
                   </div>
-                  <div className="grid grid-cols-3 gap-2 border-y border-white/10 py-4">
-                    <div className="text-center">
-                      <span className="block text-white text-sm font-semibold">4 BHK</span>
-                      <span className="text-[10px] text-white/30 uppercase tracking-widest">Type</span>
-                    </div>
-                    <div className="text-center">
-                      <span className="block text-white text-sm font-semibold">3,200</span>
-                      <span className="text-[10px] text-white/30 uppercase tracking-widest">Sq.Ft</span>
-                    </div>
-                    <div className="text-center">
-                      <span className="block text-white text-sm font-semibold">Ready</span>
-                      <span className="text-[10px] text-white/30 uppercase tracking-widest">Status</span>
-                    </div>
+                  <div className="text-center">
+                    <span className="block text-white text-sm font-semibold">3,200</span>
+                    <span className="text-[10px] text-white/30 uppercase tracking-widest">Sq.Ft</span>
                   </div>
-                  <button className="w-full py-3 border border-secondary text-secondary text-[10px] uppercase font-bold tracking-[0.2em] hover:bg-secondary hover:text-dark transition-all">
-                    View Details
-                  </button>
-               </div>
+                  <div className="text-center">
+                    <span className="block text-white text-sm font-semibold">Ready</span>
+                    <span className="text-[10px] text-white/30 uppercase tracking-widest">Status</span>
+                  </div>
+                </div>
+                <button className="w-full py-3 border border-secondary text-secondary text-[10px] uppercase font-bold tracking-[0.2em] hover:bg-secondary hover:text-dark transition-all">
+                  View Details
+                </button>
+              </div>
             </div>
           </motion.div>
         </div>
@@ -123,18 +123,18 @@ export default function Hero() {
 
       {/* Slider Controls */}
       <div className="absolute bottom-10 left-10 z-20 flex gap-4">
-         <button 
-           onClick={() => setCurrentSlide((prev) => (prev - 1 + HERO_SLIDES.length) % HERO_SLIDES.length)}
-           className="w-12 h-12 rounded-full border border-white/30 flex items-center justify-center text-white hover:bg-secondary hover:border-secondary transition-all"
-         >
-           <ChevronLeft />
-         </button>
-         <button 
-           onClick={() => setCurrentSlide((prev) => (prev + 1) % HERO_SLIDES.length)}
-           className="w-12 h-12 rounded-full border border-white/30 flex items-center justify-center text-white hover:bg-secondary hover:border-secondary transition-all"
-         >
-           <ChevronRight />
-         </button>
+        <button
+          onClick={() => setCurrentSlide((prev) => (prev - 1 + HERO_SLIDES.length) % HERO_SLIDES.length)}
+          className="w-12 h-12 rounded-full border border-white/30 flex items-center justify-center text-white hover:bg-secondary hover:border-secondary transition-all"
+        >
+          <ChevronLeft />
+        </button>
+        <button
+          onClick={() => setCurrentSlide((prev) => (prev + 1) % HERO_SLIDES.length)}
+          className="w-12 h-12 rounded-full border border-white/30 flex items-center justify-center text-white hover:bg-secondary hover:border-secondary transition-all"
+        >
+          <ChevronRight />
+        </button>
       </div>
     </section>
   );

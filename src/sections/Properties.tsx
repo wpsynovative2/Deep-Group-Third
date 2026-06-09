@@ -12,11 +12,11 @@ export default function Properties() {
         <div className="flex flex-col md:flex-row justify-between items-end mb-16 gap-6">
           <div>
             <span className="text-secondary font-bold tracking-[0.2em] uppercase text-sm mb-4 block">Curated Collection</span>
-            <h2 className="text-4xl md:text-5xl font-bold text-white">Featured Projects</h2>
+            <h2 className="text-4xl md:text-5xl font-bold text-white uppercase">Featured Projects</h2>
           </div>
           <div className="flex gap-4">
-             <Button variant="outline" className="!bg-white/5 !border-white/10 scale-90">Residential</Button>
-             <Button variant="outline" className="!bg-white/5 !border-white/10 scale-90 opacity-40 hover:opacity-100">Commercial</Button>
+            <Button variant="outline" className="!bg-white/5 !border-white/10 scale-90">Residential</Button>
+            <Button variant="outline" className="!bg-white/5 !border-white/10 scale-90 opacity-40 hover:opacity-100">Commercial</Button>
           </div>
         </div>
 
@@ -38,15 +38,15 @@ export default function Properties() {
                   referrerPolicy="no-referrer"
                 />
                 <div className="absolute inset-0 bg-dark/40 group-hover:bg-dark/20 transition-colors duration-500" />
-                
+
                 {property.featured && (
                   <div className="absolute top-6 left-6">
                     <Badge className="!rounded-sm">Featured</Badge>
                   </div>
                 )}
-                
+
                 <div className="absolute bottom-6 left-6 right-6 flex justify-between items-end transform translate-y-4 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-500">
-                   <Button variant="outline" className="w-full text-[10px] py-2 scale-95 !border-secondary !text-secondary hover:!bg-secondary hover:!text-dark">View Details</Button>
+                  <Button variant="outline" className="w-full text-[10px] py-2 scale-95 !border-secondary !text-secondary hover:!bg-secondary hover:!text-dark">View Details</Button>
                 </div>
               </div>
 
@@ -61,7 +61,7 @@ export default function Properties() {
                   </div>
                   <span className="text-secondary font-bold text-xl">{property.price.split(' ')[0]}</span>
                 </div>
-                
+
                 <div className="grid grid-cols-2 gap-4 pt-6 border-t border-white/10 mb-6">
                   <div className="flex flex-col">
                     <span className="text-white font-semibold text-sm">{property.type}</span>
@@ -80,7 +80,7 @@ export default function Properties() {
         </div>
 
         <div className="mt-16 text-center">
-           <Button variant="secondary" className="px-12">View All Projects</Button>
+          <Button variant="secondary" className="px-12">View All Projects</Button>
         </div>
       </div>
     </section>

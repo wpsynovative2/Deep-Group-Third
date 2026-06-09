@@ -7,8 +7,15 @@ export default function WhyChoose() {
     <section className="py-24 bg-dark overflow-hidden">
       <div className="max-w-7xl mx-auto px-6">
         <div className="text-center mb-16">
-          <span className="text-secondary font-bold tracking-[0.2em] uppercase text-xs mb-4 block">Our Promise</span>
-          <h2 className="text-4xl md:text-5xl font-bold text-white">Why Choose Deep Group</h2>
+
+
+          <div className="flex items-center justify-center gap-3 mb-6">
+            <div className="w-12 h-0.5 bg-secondary"></div>
+            <span className="text-secondary font-bold tracking-[0.2em] uppercase text-xs block">Our Promise</span>
+            <div className="w-12 h-0.5 bg-secondary"></div>
+          </div>
+
+          <h2 className="text-4xl md:text-5xl font-bold text-white uppercase">Why Choose Deep Group</h2>
         </div>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">

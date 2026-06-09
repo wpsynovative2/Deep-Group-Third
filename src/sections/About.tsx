@@ -21,14 +21,14 @@ export default function About() {
           className="relative"
         >
           <div className="absolute -top-10 -left-10 w-40 h-40 bg-secondary/10 rounded-full blur-3xl" />
-          
+
           <img
             src="https://images.unsplash.com/photo-1613977257363-707ba9348227?q=80&w=2070&auto=format&fit=crop"
             alt="Deep Group Architecture"
             className="rounded-lg shadow-2xl relative z-10 w-full aspect-square md:aspect-auto md:h-[600px] object-cover opacity-80"
             referrerPolicy="no-referrer"
           />
-          
+
           <motion.div
             initial={{ scale: 0.8, opacity: 0 }}
             whileInView={{ scale: 1, opacity: 1 }}
@@ -50,13 +50,13 @@ export default function About() {
             <div className="w-12 h-0.5 bg-secondary"></div>
             <span className="text-secondary font-bold tracking-[0.2em] uppercase text-xs">Trust & Legacy</span>
           </div>
-          <h2 className="text-4xl md:text-5xl font-light mb-8 leading-tight text-white">
+          <h2 className="text-4xl md:text-5xl font-light mb-8 leading-tight text-white uppercase" >
             Building Trust Through <br />
             <span className="font-bold text-secondary">Premium Spaces</span>
           </h2>
-          
+
           <p className="text-white/50 text-lg mb-8 leading-relaxed font-light">
-            At Deep Group, we don't just build structures; we craft sanctuaries that reflect your aspirations. 
+            At Deep Group, we don't just build structures; we craft sanctuaries that reflect your aspirations.
             For over a decade, our architectural philosophy has blended modern innovation with timeless ethics.
           </p>
 
@@ -72,7 +72,7 @@ export default function About() {
           <div className="grid grid-cols-3 gap-8 pb-12 border-b border-white/10 mb-12">
             {stats.map((stat, i) => (
               <div key={i} className="border-l border-secondary pl-6">
-                <h4 className="text-3xl font-bold text-secondary">{stat.value}+</h4>
+                <h4 className="text-3xl font-bold text-secondary" style={{ fontFamily: "MontserratExtraBold" }}>{stat.value}+</h4>
                 <p className="text-[10px] uppercase font-bold text-white/30 tracking-wider mt-1">{stat.label}</p>
               </div>
             ))}

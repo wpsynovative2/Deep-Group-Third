@@ -7,8 +7,14 @@ export default function Amenities() {
   return (
     <section id="amenities" className="py-24 bg-dark">
       <div className="max-w-7xl mx-auto px-6 text-center">
-        <span className="text-secondary font-bold tracking-[0.2em] uppercase text-sm mb-4 block">Lifestyle & Comfort</span>
-        <h2 className="text-4xl md:text-5xl font-bold mb-16">Premium Amenities</h2>
+
+        <div className="flex items-center justify-center gap-3 mb-6">
+          <div className="w-12 h-0.5 bg-secondary"></div>
+          <span className="text-secondary font-bold tracking-[0.2em] uppercase text-sm  block">Lifestyle & Comfort</span>
+          <div className="w-12 h-0.5 bg-secondary"></div>
+        </div>
+        <h2 className="text-4xl md:text-5xl font-bold mb-16 uppercase">Premium Amenities</h2>
+
 
         <div className="grid grid-cols-2 lg:grid-cols-5 gap-6">
           {AMENITIES.map((item, i) => {

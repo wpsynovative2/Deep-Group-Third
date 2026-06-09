@@ -7,7 +7,13 @@ export default function Gallery() {
     <section id="gallery" className="py-24 bg-dark overflow-hidden">
       <div className="max-w-7xl mx-auto px-6">
         <div className="text-center mb-16">
-          <span className="text-secondary font-bold tracking-[0.2em] uppercase text-xs mb-4 block">Visual Journey</span>
+
+          <div className="flex items-center justify-center gap-3 mb-6">
+            <div className="w-12 h-0.5 bg-secondary"></div>
+            <span className="text-secondary font-bold tracking-[0.2em] uppercase text-xs block">Visual Journey</span>
+            <div className="w-12 h-0.5 bg-secondary"></div>
+          </div>
+
           <h2 className="text-4xl md:text-5xl font-bold text-white">Exclusive Gallery</h2>
         </div>
 
