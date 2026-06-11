@@ -26,14 +26,14 @@ export default function Amenities() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ delay: i * 0.05 }}
                 viewport={{ once: true }}
-                whileHover={{ y: -5, backgroundColor: 'rgba(201,148,60,0.1)' }}
-                className="glass-card p-6 flex flex-col items-center group transition-all duration-300"
+                whileHover={{ y: -5, backgroundColor: '#b88635' }}
+                className="bg-[#c9943c] rounded-lg p-6 flex flex-col items-center group transition-all duration-300 shadow-xl"
               >
-                <div className="w-12 h-12 rounded-full bg-secondary/15 flex items-center justify-center mb-4 border border-secondary/30 group-hover:bg-secondary group-hover:text-dark transition-all duration-500">
-                  <Icon size={20} className="text-secondary group-hover:text-dark transition-colors" />
+                <div className="w-12 h-12 rounded-full bg-dark/10 flex items-center justify-center mb-4 border border-dark/20 group-hover:bg-dark transition-all duration-500">
+                  <Icon size={20} className="text-dark group-hover:text-[#c9943c] transition-colors" />
                 </div>
-                <h4 className="font-semibold text-sm tracking-wide mb-1 text-white/90 uppercase">{item.title}</h4>
-                <span className="text-[10px] text-white/30 uppercase tracking-[0.2em] font-bold">{item.description.split(' ')[0]}</span>
+                <h4 className="font-semibold text-sm tracking-wide mb-1 text-dark uppercase">{item.title}</h4>
+                <span className="text-[10px] text-dark/70 uppercase tracking-[0.2em] font-bold">{item.description.split(' ')[0]}</span>
               </motion.div>
             );
           })}

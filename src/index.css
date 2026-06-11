@@ -34,6 +34,7 @@
 @layer base {
   body {
     @apply font-sans bg-dark text-white antialiased;
+    /* color: #c9943c; */
   }
 
   h1,
