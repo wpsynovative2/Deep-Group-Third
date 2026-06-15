@@ -21,13 +21,8 @@ export default function Navbar() {
     <nav className={`fixed top-0 left-0 w-full z-50 transition-all duration-500 ${isScrolled ? 'bg-dark/80 backdrop-blur-md shadow-xl py-4 border-b border-white/5' : 'bg-transparent py-6'}`}>
       <div className="max-w-7xl mx-auto px-6 flex justify-between items-center">
         <a href="#home" className="flex items-center gap-2">
-          {/* Logo Placeholder */}
-          <div className="w-10 h-10 border-2 border-secondary flex items-center justify-center rounded-none transition-all duration-300">
-            <span className="text-secondary font-bold text-xl">D</span>
-          </div>
-          <span className="text-white font-semibold text-lg tracking-wider uppercase">
-            DEEP <span className="text-secondary opacity-80">GROUP</span>
-          </span>
+          {/* Logo */}
+          <img src="https://deepgroup.co.in/wp-content/uploads/2025/11/cropped-deep-group-logo1.webp" alt="Deep Group Logo" className="h-10 w-auto object-contain" />
         </a>
 
         {/* Desktop Menu */}
